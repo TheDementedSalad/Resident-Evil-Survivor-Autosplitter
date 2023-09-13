@@ -1,4 +1,4 @@
-# Sea Of Stars Autosplitter
+# Resident Evil Survivor Autosplitter
 
 IGT & RTA Autosplitter for Resident Evil Survivor (2000)
 
