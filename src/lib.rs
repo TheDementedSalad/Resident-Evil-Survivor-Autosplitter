@@ -44,7 +44,7 @@ impl Door {
 }
 
 // Creates a constant struct, which references the struct "Door" and stores a list of tuples containing information about door splits
-const DOORS: [Door; 87] = [
+const DOORS: [Door; 89] = [
     Door::new(7, 0, 4),
     Door::new(8, 1, 0),
     Door::new(8, 2, 1),
@@ -73,6 +73,8 @@ const DOORS: [Door; 87] = [
     Door::new(3, 5, 2),
     Door::new(3, 1, 5),
     Door::new(3, 8, 1),
+    Door::new(3, 7, 8),
+    Door::new(3, 8, 7),
     Door::new(3, 9, 8),
     Door::new(3, 10, 9),
     Door::new(10, 0, 10),
@@ -269,6 +271,10 @@ struct Settings {
     #[default = false]
     /// Rope
     rope: bool,
+
+    #[default = false]
+    /// Shotgun
+    shotgun: bool,
 
     #[default = false]
     /// Card Key
@@ -535,6 +541,7 @@ fn split(watchers: &Watchers, settings: &Settings) -> bool {
         || settings.manhole && inventory.check(|arr| arr.contains(&48))
         || settings.prison && inventory.check(|arr| arr.contains(&41))
         || settings.rope && inventory.check(|arr| arr.contains(&43))
+        || settings.shotgun && inventory.check(|arr| arr.contains(&4))
         || settings.cardkey && inventory.check(|arr| arr.contains(&47))
         || settings.nadegun && inventory.check(|arr| arr.contains(&8))
         || settings.magnum && inventory.check(|arr| arr.contains(&5))
