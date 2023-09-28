@@ -44,7 +44,7 @@ impl Door {
 }
 
 // Creates a constant struct, which references the struct "Door" and stores a list of tuples containing information about door splits
-const DOORS: [Door; 89] = [
+const DOORS: [Door; 90] = [
     Door::new(7, 0, 4),
     Door::new(8, 1, 0),
     Door::new(8, 2, 1),
@@ -107,6 +107,7 @@ const DOORS: [Door; 89] = [
     Door::new(16, 10, 9), //Cable Car RNG end
     Door::new(16, 11, 10),
     Door::new(5, 0, 11),
+    Door::new(6, 0, 11),
     Door::new(2, 1, 0),
     Door::new(2, 2, 1),
     Door::new(2, 3, 2), //Enter Facility
