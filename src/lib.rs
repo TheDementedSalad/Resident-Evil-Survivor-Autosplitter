@@ -16,6 +16,7 @@ use asr::{
     time_util::frame_count,
     timer::{self, TimerState},
     watcher::Watcher,
+    settings::Gui
 };
 
 asr::panic_handler!();
@@ -152,8 +153,11 @@ async fn main() {
         let mut emulator = retry(|| Emulator::attach()).await;
         let mut watchers = Watchers::default();
         let offsets = Offsets::new();
+        let mut settings = Settings::register();
 
         loop {
+            settings.update();
+
             if !emulator.is_open() {
                 break;
             }
@@ -207,7 +211,7 @@ async fn main() {
 }
 
 // This is where we will create our settings
-#[derive(asr::user_settings::Settings)]
+#[derive(Gui)]
 struct Settings {
     #[default = true]
     /// ---------- Start Conditions Below ----------
