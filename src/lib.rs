@@ -397,20 +397,20 @@ struct Offsets {
 impl Offsets {
     fn new() -> Self {
         Self {
-            gamecode_ntsc: 0x800940C,
+            gamecode_ntsc: 0x940C,
 
             hp: 0x800A8974,                // Character HP
             igt: 0x80063BE4,               // In Game Time
             map_id: 0x800B4130,            // Current Room's ID
             stage_id: 0x800B4EB0,          // Current Stage ID
             item_id: 0x800AF890,           // 1st item in array
-            gamestate: 0x8001FF998,        // gamestate
+            gamestate: 0x801FF998,        // gamestate
             startbuff: 0x8007FA9D,         // check to stop timer starting in demo
 
             //Boss HP's
-            hypno1: 0x8001EE41E,
-            hypno2: 0x8001F104A,           // final boss phase 1
-            hypno3: 0x8001F190E,           // final boss phase 2
+            hypno1: 0x801EE41E,
+            hypno2: 0x801F104A,           // final boss phase 1
+            hypno3: 0x801F190E,           // final boss phase 2
         }
     }
 }
