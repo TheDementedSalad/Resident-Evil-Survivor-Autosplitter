@@ -397,7 +397,7 @@ struct Offsets {
 impl Offsets {
     fn new() -> Self {
         Self {
-            gamecode_ntsc: 0x940C,
+            gamecode_ntsc: 0x8000940C,
 
             hp: 0x800A8974,                // Character HP
             igt: 0x80063BE4,               // In Game Time
